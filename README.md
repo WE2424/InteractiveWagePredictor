@@ -63,8 +63,7 @@ cd InteractiveWagePredictor
 2. Install packages
    
 ```bash
-R -e "options(repos='https://cloud.r-project.org'); install.packages(readLines('dep/packages.txt'))"
-
+R -e "install.packages(readLines('dep/packages.txt'), type='binary', repos='https://cloud.r-project.org')"
 ```
 
 3. Run the Shiny app
