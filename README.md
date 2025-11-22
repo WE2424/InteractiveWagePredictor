@@ -2,6 +2,8 @@
 
 This Shiny application combines machine learning with data visualization. Demographic and labor attributes from a Wooldridge dataset are chosen and the app predicts monthly wages using [Linear Regression](https://en.wikipedia.org/wiki/Linear_regression), [Decision Tree](https://en.wikipedia.org/wiki/Decision_tree_learning), or [Random Forest](https://en.wikipedia.org/wiki/Random_forest). Next to the wage, an avatar with the selected attributes is created using the DiceBear Avataaars API.
 
+[Live site](https://ml100t-wim-van0duuren.shinyapps.io/InteractiveWagePredictor/)
+
 - [Features](#features)
   - [Prediction](#prediction)
   - [Avatar](#avatar)
