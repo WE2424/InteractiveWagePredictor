@@ -97,11 +97,6 @@ build_avatar_url <- function(input, overrides = list()) {
     if (!is.null(val) && val == 1) skin <- "8B4513"
   }
   
-  if ("married" %in% input$predictors) {
-    val <- input$val_married
-    if (!is.null(val) && val == 1) accessory <- "round"
-  }
-  
   if ("south" %in% input$predictors) {
     val <- input$val_south
     if (!is.null(val) && val == 1) bgColor <- "ffb3ba"
