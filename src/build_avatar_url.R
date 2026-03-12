@@ -7,13 +7,13 @@ build_avatar_url <- function(input, overrides = list()) {
   accessory <- "blank"
   bgColor <- "bae1ff"
   skin <- "ffdbac"
-  facialHair <- ""
+  facialHair <- "beardLight"
   facialHairProbability <- 0
   facialHairColor <- "000000"
   accessoriesProbability <- 0
   accessories <- "eyepatch"
   accessoriesColor <- "257C41"
-  top <- ""
+  top <- "dreads01"
   hatColor <- "257C41"
   clothesColor <- "25557c"
   eyes <- "surprised"
@@ -88,8 +88,8 @@ build_avatar_url <- function(input, overrides = list()) {
   
   if ("exper" %in% input$predictors) {
     val <- input$val_exper
-    facialHair <- if (val < 13) "" else if (val < 25) "beardLight" else if (val < 38) "beardMedium" else "beardMajestic"
-    facialHairProbability <- if (val >= 13) 100
+    facialHair <- if (val < 13) "beardLight" else if (val < 25) "beardLight" else if (val < 38) "beardMedium" else "beardMajestic"
+    facialHairProbability <- if (val >= 13) 100 else 0
   }
   
   if ("black" %in% input$predictors) {

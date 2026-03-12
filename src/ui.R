@@ -28,10 +28,15 @@ fluidPage(
     ),
     
     mainPanel(
-      h3("Predicted Wage"),
-      verbatimTextOutput("predictedWage"),
-      h3("Your Avatar"),
-      uiOutput("avatar")
+      tabsetPanel(
+        tabPanel(
+          "Prediction & Avatar",
+          h3("Predicted Wage"),
+          verbatimTextOutput("predictedWage"),
+          h3("Your Avatar"),
+          uiOutput("avatar")
+        )
+      )
     )
   )
 )

@@ -3,10 +3,21 @@ library(wooldridge)
 library(dplyr)
 library(randomForest)
 library(rpart)
+library(ggplot2)
 
 source("build_avatar_url.R")
 
 data(wage2)
+
+history <- reactiveVal(
+  data.frame(
+    est_id = numeric(),
+    Model = character(),
+    wage = numeric(),
+    r2 = numeric(),
+    std = numeric()
+  )
+)
 
 function(input, output, session) {
   model_fit <- reactive({
@@ -101,7 +112,7 @@ function(input, output, session) {
           accessory = "blank",
           facialHairProbability = 0,
           accessoriesProbability = 0,
-          top = "",
+          top = "longButNotTooLong",
           hatColor = "257C41",
           clothesColor = "25557c",
           eyes = "surprised",
@@ -121,7 +132,6 @@ function(input, output, session) {
             accessory = "blank",
             facialHairProbability = 0,
             accessoriesProbability = 0,
-            top = "",
             hatColor = "257C41",
             clothesColor = "25557c",
             eyes = "surprised",
